@@ -1,13 +1,25 @@
 {
-  "$schema": "https://json.schemastore.org/package.json",
-  "name": "@thecto/opencode-debug-plugin",
-  "version": "1.6.3",
+  "name": "@grugs/opencode-debug",
+  "version": "1.6.4",
   "description": "Language-agnostic HTTP debugging and live logs for OpenCode v2 with ngrok tunneling support",
-  "type": "module",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "debug",
+    "debugging",
+    "ngrok",
+    "plugin"
+  ],
+  "homepage": "https://github.com/BrianGrug/opencode-debug#readme",
+  "bugs": {
+    "url": "https://github.com/BrianGrug/opencode-debug/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianGrug/opencode-debug.git"
+  },
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -23,38 +35,17 @@
       "import": "./dist/rpc.js"
     }
   },
-  "author": "The CTO",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrianGrug/opencode-debug.git"
-  },
-  "bugs": {
-    "url": "https://github.com/BrianGrug/opencode-debug/issues"
-  },
-  "homepage": "https://github.com/BrianGrug/opencode-debug#readme",
-  "keywords": [
-    "opencode",
-    "opencode-plugin",
-    "debug",
-    "debugging",
-    "ngrok",
-    "plugin"
-  ],
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "build": "bun run scripts/build.ts && tsc --emitDeclarationOnly --declaration --outDir dist",
-    "prepublishOnly": "bun run build"
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "index.ts",
     "tui.ts"
   ],
-  "engines": {
-    "node": ">=18"
-  },
-  "publishConfig": {
-    "access": "public"
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "bun run scripts/build.ts && tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build"
   },
   "dependencies": {
     "@opencode/plugin": "^2.0.28",
@@ -72,5 +63,13 @@
     "@opentui/core": ">=0.5.8",
     "@opentui/solid": ">=0.5.8",
     "solid-js": ">=1.9.0"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "$schema": "https://json.schemastore.org/package.json",
+  "module": "./dist/index.js"
 }
