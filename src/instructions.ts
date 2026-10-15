@@ -1,6 +1,6 @@
 export const debugWorkflow = `## Runtime debugging workflow
 
-Debug the issue described by the user or the current conversation. Work in this session and call the debugging tools directly, without delegating to other agents.
+Debug the issue described by the user or the current conversation.
 
 1. Call debug_status. If capture is active, use debug_read to inspect existing logs and retain anything useful for diagnosis or comparison.
 2. If capture is inactive, call debug_start without a port argument to select a free random port. Do not explicitly pass port 0, 4173, or 5173.
